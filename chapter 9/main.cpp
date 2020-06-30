@@ -1,7 +1,9 @@
 #include <iostream>
+#include <iomanip>
 #include "9.5.h"
 
 int main() {
+	
 
 	Quadratic q1;
 
@@ -9,7 +11,9 @@ int main() {
 
 	q1.add(q2);
 
-	std::cout << q1.getA();
+	std::cout << q1.getA() << std::endl;
+
+	std::cout << q1.toString();
 
 	return 0;
 }

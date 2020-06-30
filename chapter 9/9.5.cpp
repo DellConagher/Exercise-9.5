@@ -2,7 +2,10 @@
 #include <cmath>
 #include <string>
 #include <stdexcept>
+#include <iomanip>
 #include "9.5.h"
+
+
 
 // Constructor definition
 Quadratic::Quadratic(double a, double b, double c) {
@@ -46,28 +49,23 @@ double Quadratic::getC() const { return m_c; }
 
 // add quadratic1 to quadratic2
 void Quadratic::add(Quadratic other) {
-	double addA = getA() + other.getA();
-	setA(addA);
-	double addB = getB() + other.getB();
-	setB(addB);
-	double addC = getA() + other.getC();
-	setC(addC);
+	m_a += other.getA();
+	m_b += other.getB();
+	m_c += other.getC();
 }
 
 // subtract
 void Quadratic::subtract(Quadratic other) {
-	double subA = getA() - other.getA();
-	setA(subA);
-	double subB = getB() - other.getB();
-	setB(subB);
-	double subC = getC() - other.getC();
-	setC(subC);
+	m_a -= other.getA();
+	m_b -= other.getB();
+	m_c -= other.getC();
 }
 
 // string
-//std::string Quadratic::toString() {
-
-//}
+std::string Quadratic::toString() {
+	std::string var = std::to_string((int) m_a) + "x^2 + " + std::to_string((int) m_b) + "x + " + std::to_string((int) m_c) + " = 0";
+	return var;
+}
 
 
 // solve
