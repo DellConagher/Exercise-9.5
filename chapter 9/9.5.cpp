@@ -65,9 +65,9 @@ void Quadratic::subtract(Quadratic other) {
 }
 
 // string
-std::string Quadratic::toString() {
+//std::string Quadratic::toString() {
 
-}
+//}
 
 
 // solve
